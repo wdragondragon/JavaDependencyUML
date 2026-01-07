@@ -1,0 +1,77 @@
+
+    digraph JavaDeps {
+      rankdir=LR;
+
+      graph [
+        nodesep=1.2,
+        ranksep=2.0,
+        splines=polyline,
+        overlap=false,
+        concentrate=false
+      ];
+
+      node [
+        shape=box,
+        fontsize=10,
+        margin="0.25,0.18"
+      ];
+
+      edge [
+        fontsize=10,
+        arrowsize=0.7
+      ];
+"org.apache.hive.jdbc.Utils.JdbcConnectionParams" [label="org.apache.hive.jdbc.Utils.JdbcConnectionParams"];
+"org.apache.hive.jdbc.saml.JdbcBrowserClientContext" [label="org.apache.hive.jdbc.saml.JdbcBrowserClientContext"];
+"org.apache.hive.service.rpc.thrift.TProtocolVersion" [label="org.apache.hive.service.rpc.thrift.TProtocolVersion"];
+"org.apache.hive.jdbc.saml.IJdbcBrowserClient" [label="org.apache.hive.jdbc.saml.IJdbcBrowserClient"];
+"java.sql.Connection" [label="java.sql.Connection"];
+"java.sql.ResultSet" [label="java.sql.ResultSet"];
+"org.eclipse.jetty.server.Server" [label="org.eclipse.jetty.server.Server"];
+"org.apache.hive.jdbc.saml.HiveJdbcBrowserServerResponse" [label="org.apache.hive.jdbc.saml.HiveJdbcBrowserServerResponse"];
+"org.apache.hive.jdbc.JdbcColumnAttributes" [label="org.apache.hive.jdbc.JdbcColumnAttributes"];
+"org.apache.hive.jdbc.HiveBaseResultSet" [label="org.apache.hive.jdbc.HiveBaseResultSet"];
+"org.apache.hive.jdbc.saml.HiveJdbcBrowserClient" [label="org.apache.hive.jdbc.saml.HiveJdbcBrowserClient"];
+"java.sql.Statement" [label="java.sql.Statement"];
+"org.apache.hive.jdbc.logs.InPlaceUpdateStream" [label="org.apache.hive.jdbc.logs.InPlaceUpdateStream"];
+"java.net.URI" [label="java.net.URI"];
+"java.util.Properties" [label="java.util.Properties"];
+"javax.security.auth.Subject" [label="javax.security.auth.Subject"];
+"org.apache.thrift.transport.TTransport" [label="org.apache.thrift.transport.TTransport"];
+"org.apache.hive.jdbc.HiveConnection" [label="org.apache.hive.jdbc.HiveConnection"];
+"org.apache.hive.service.rpc.thrift.TOperationHandle" [label="org.apache.hive.service.rpc.thrift.TOperationHandle"];
+"TCLIService.Iface" [label="TCLIService.Iface"];
+"org.apache.hive.jdbc.HiveStatement" [label="org.apache.hive.jdbc.HiveStatement"];
+"java.sql.SQLWarning" [label="java.sql.SQLWarning"];
+"org.apache.hive.service.rpc.thrift.TSessionHandle" [label="org.apache.hive.service.rpc.thrift.TSessionHandle"];
+"org.apache.hive.service.cli.TableSchema" [label="org.apache.hive.service.cli.TableSchema"];
+"java.util.concurrent.BlockingQueue" [label="java.util.concurrent.BlockingQueue"];
+"org.apache.hive.jdbc.saml.HiveJdbcBrowserClient" -> "org.apache.hive.jdbc.saml.IJdbcBrowserClient" [label="implements", style="dashed"];
+"org.apache.hive.jdbc.saml.HiveJdbcBrowserClient" -> "org.apache.hive.jdbc.saml.HiveJdbcBrowserServerResponse" [label="field", style="solid"];
+"org.apache.hive.jdbc.HiveConnection" -> "org.apache.hive.jdbc.saml.IJdbcBrowserClient" [label="field", style="solid"];
+"org.apache.hive.jdbc.HiveConnection" -> "org.apache.hive.service.rpc.thrift.TProtocolVersion" [label="field", style="solid"];
+"org.apache.hive.jdbc.HiveBaseResultSet" -> "java.sql.SQLWarning" [label="field", style="solid"];
+"org.apache.hive.jdbc.HiveConnection" -> "java.util.Properties" [label="field", style="solid"];
+"org.apache.hive.jdbc.HiveStatement" -> "TCLIService.Iface" [label="field", style="solid"];
+"org.apache.hive.jdbc.saml.HiveJdbcBrowserClient" -> "org.apache.hive.jdbc.saml.JdbcBrowserClientContext" [label="field", style="solid"];
+"org.apache.hive.jdbc.HiveConnection" -> "java.sql.SQLWarning" [label="field", style="solid"];
+"org.apache.hive.jdbc.HiveBaseResultSet" -> "java.sql.Statement" [label="field", style="solid"];
+"org.apache.hive.jdbc.saml.HiveJdbcBrowserClient" -> "org.eclipse.jetty.server.Server" [label="field", style="solid"];
+"org.apache.hive.jdbc.saml.HiveJdbcBrowserClient" -> "java.util.concurrent.BlockingQueue" [label="field", style="solid"];
+"org.apache.hive.jdbc.HiveConnection" -> "javax.security.auth.Subject" [label="field", style="solid"];
+"org.apache.hive.jdbc.HiveBaseResultSet" -> "java.sql.ResultSet" [label="implements", style="dashed"];
+"org.apache.hive.jdbc.saml.JdbcBrowserClientContext" -> "java.net.URI" [label="field", style="solid"];
+"org.apache.hive.jdbc.HiveBaseResultSet" -> "org.apache.hive.service.cli.TableSchema" [label="field", style="solid"];
+"org.apache.hive.jdbc.HiveConnection" -> "org.apache.hive.service.rpc.thrift.TSessionHandle" [label="field", style="solid"];
+"org.apache.hive.jdbc.HiveConnection" -> "org.apache.thrift.transport.TTransport" [label="field", style="solid"];
+"org.apache.hive.jdbc.HiveStatement" -> "java.sql.SQLWarning" [label="field", style="solid"];
+"org.apache.hive.jdbc.HiveBaseResultSet" -> "org.apache.hive.jdbc.JdbcColumnAttributes" [label="field", style="solid"];
+"org.apache.hive.jdbc.HiveStatement" -> "org.apache.hive.service.rpc.thrift.TOperationHandle" [label="field", style="solid"];
+"org.apache.hive.jdbc.HiveStatement" -> "java.sql.ResultSet" [label="field", style="solid"];
+"org.apache.hive.jdbc.HiveConnection" -> "java.sql.Connection" [label="implements", style="dashed"];
+"org.apache.hive.jdbc.HiveStatement" -> "java.sql.Statement" [label="implements", style="dashed"];
+"org.apache.hive.jdbc.HiveConnection" -> "org.apache.hive.jdbc.Utils.JdbcConnectionParams" [label="field", style="solid"];
+"org.apache.hive.jdbc.HiveStatement" -> "org.apache.hive.jdbc.logs.InPlaceUpdateStream" [label="field", style="solid"];
+"org.apache.hive.jdbc.HiveStatement" -> "org.apache.hive.service.rpc.thrift.TSessionHandle" [label="field", style="solid"];
+"org.apache.hive.jdbc.HiveConnection" -> "TCLIService.Iface" [label="field", style="solid"];
+"org.apache.hive.jdbc.HiveStatement" -> "org.apache.hive.jdbc.HiveConnection" [label="field", style="solid"];
+}
